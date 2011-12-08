@@ -1,0 +1,22 @@
+<% IF session.logged_in %>
+<form name="Ajouter une rubrique" action="<% add_rubrique_url %>" method=post class=add-entry>
+
+  <br><label>Rubrique parente:</label>
+  <select id="SelectRub" name=id_parent required>
+	<% FOREACH id IN rubPar.keys.nsort %>
+	<option value=<% rubPar.$id.id %> >
+	    <% rubPar.$id.title %>
+	</option>
+	<% END %>
+  </select>
+
+  <br><label>Nom:</label>
+  <input type=text size=50 name=title placeholder="Nom de la rubrique" required />
+  
+  <br /><label>Description:</label>
+  <textarea name=text rows=20 cols=55 required></textarea>
+  
+  <br />
+  <input type=submit value="Publier" />
+</form>
+<% END %>

@@ -1,0 +1,11 @@
+<ul class=rubriques>
+  <% IF rubriques.size %>
+  <% FOREACH id IN rubriques.keys.nsort %>
+  <li>
+    <h2><% rubriques.$id.title %></h2>
+  </li>
+  <% END %>
+  <% ELSE %>
+  <li><em>Unbelievable.  No rubriques here so far</em></li>
+  <% END %>
+</ul>

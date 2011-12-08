@@ -1,0 +1,1 @@
+INSERT INTO rubriques (id, title, text) values (0, "racine", "Racine du site");

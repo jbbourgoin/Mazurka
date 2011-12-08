@@ -1,0 +1,23 @@
+<% IF session.logged_in %>
+<form name="Ajouter un article" action="<% add_article_url %>" method=post class=add-entry>
+  
+  <label>Rubrique:</label>
+  <select id="SelectRub" name=id_rubrique required>
+        <% FOREACH id IN rubPar.keys.nsort %>
+	<option value=<% rubPar.$id.id %> ><% rubPar.$id.title %></option>
+	<% END %>
+  </select>
+  
+  <br><label>Titre:</label>
+  <input type=text size=50 name=title placeholder="Titre de l'article" required />
+  
+  <br /><label>Date:</label>
+  <input type="date" name=date required />
+  
+  <br /><label>Texte:</label>
+  <textarea name=text rows=20 cols=55 required></textarea>
+  
+  <br />
+  <input type=submit value="Publier" />
+</form>
+<% END %>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="<% settings.lang %>">
+  <head>
+    <title><% settings.site_title %></title>
+    <meta http-equiv="Content-type" content="text/html"  />
+    <meta charset="<% settings.charset %>" />
+    <meta content="<% settings.lang %>" />
+    <link rel=stylesheet type=text/css href="<% css_normal_url %>">
+    <link rel=stylesheet type=text/css href="<% css_jqueryui_url %>">
+    <script type="text/javascript" src="<% request.uri_base %>/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="<% request.uri_base %>/javascripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="<% request.uri_base %>/javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="<% request.uri_base %>/javascripts/DatePicker.js"></script>
+    
+  </head>
+
+  <body>
+    <div class=page>
+      <h1><a href="<% start_url %>"><% settings.site_title %></a></h1>
+      <div class=metanav>
+        <% IF not session.logged_in %>
+        <a href="<% login_url %>">log in</a>
+        <% ELSE %>
+        <a href="<% logout_url %>">log out</a>
+        <a href="<% admin_url %>">admin</a>
+        <% END %>
+      </div>
+      <% IF msg %>
+      <div class=flash> <% msg %> </div>
+      <% END %>
+      <% content %>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://perldancer.org/">
+      Dancer</a> <% dancer_version %>
+    </div>
+  </body>
+  
+</html>

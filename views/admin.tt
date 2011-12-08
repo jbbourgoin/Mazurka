@@ -1,0 +1,4 @@
+<% IF session.logged_in %>
+<p><a href="<% add_rubrique_url %>">Ajouter une rubrique</a></p>
+<p><a href="<% add_article_url %>">Ajouter un article</a></p>
+<% END %>

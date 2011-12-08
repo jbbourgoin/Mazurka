@@ -1,0 +1,14 @@
+<ul class=articles>
+  <% IF articles.size %>
+  <% FOREACH id IN articles.keys.nsort.reverse %>
+  <li>
+    <h2><% articles.$id.title %></h2>
+    <h3><% articles.$id.date %></h3>
+    <% articles.$id.text %>
+  </li>
+  <% END %>
+
+  <% ELSE %>
+  <li><em>Unbelievable.  No articles here so far</em></li>
+  <% END %>
+</ul>
