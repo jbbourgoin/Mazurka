@@ -32,8 +32,9 @@
     </div>
 
     <div id="footer">
-      Powered by <a href="http://perldancer.org/">
-      Dancer</a> <% dancer_version %>
+      <p>Mazurka is written by Jean-Baptiste Bourgoin</p>
+      <p>Powered by <a href="http://perldancer.org/">
+      Dancer</a> <% dancer_version %></p>
     </div>
   </body>
   
