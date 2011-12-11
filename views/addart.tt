@@ -3,9 +3,9 @@
   
   <label>Rubrique:</label>
   <select id="SelectRub" name=id_rubrique required>
-        <% FOREACH id IN rubPar.keys.nsort %>
-	<option value=<% rubPar.$id.id %> ><% rubPar.$id.title %></option>
-	<% END %>
+    <% FOREACH id IN rubPar.keys.nsort %>
+    <option value=<% rubPar.$id.id %> ><% rubPar.$id.title %></option>
+    <% END %>
   </select>
   
   <br><label>Titre:</label>
